@@ -1,0 +1,29 @@
+
+.bg-dark{
+    background-color: darkslategray;
+}
+.text-white{
+    color: white;
+}
+.btn{
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 15px;
+    border: 1px solid aquamarine;
+    border-radius: 4px;
+}
+.btn-primary{
+    background-color: blue;
+    color: white;
+}
+.card{
+    max-width: 150px;
+}
+
+.card .card-img img{
+    max-width: 100%;
+}
+
+.card .card-body .card-text{
+    font-size: 0.8rem;
+}
