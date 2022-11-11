@@ -1,32 +1,34 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import './Header.css'
 
-var list = [1,2,3,4,5,6,7,8,9,10];
+var list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let result = 0;
 list.forEach(element => {
     result = result + element;
 });
 
-
-const header = () => {
+var value = "Bu bir değişkenden elde edilmiş değerdir."
+const Header = ({text, header}) => {
     return (
-        <div className='container-fluid bg-dark text-white'>
-            <div className='card'>
-                <div className='card-img'>
-                    <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1159&q=80" alt="lion side" />
+        <>
+            <div className='container-fluid'>
+                <div className='card bg-gray-700 opacity-80 text-stone-50 text-left p-10'>
+                  <h2 className='text-gray-200 text-6xl text-left p-10 shadow-2xl'>{header} </h2>
+                  <p className='pt-16 text-lg'>{text}</p>
+                  {value}
                 </div>
-                <div className='card-body'>
-                    <div className='card-title'>
-                        <h1>Card Title</h1>
-                    </div>
-                    <div className='card-text'>
-                        asmdlahsd abskdjabs aksdbkasdbak baksdb kabsdkabs kdbaskd bakdb kasbd kasbdkasbdkabsndmbzxckbzx kbckabckabsd
-                    </div>
-                </div>
-                <button type="" className='btn btn-primary '>Go !</button>
             </div>
-        </div>
+        </>
+
     );
 }
-
-export default header
+Header.propTypes = {
+    text: PropTypes.string,
+    header: PropTypes.string
+}
+Header.defaultProps = {
+    text: "Ben seninim",
+    header: "Beni Ara"
+}
+export default Header
