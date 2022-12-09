@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 import LoginView from './views/Login/LoginView';
 import CardsView from './views/Cards/CardsView';
+import { FirstScenerio, SecondScenerio, ThirdScenerio } from './components/Hooks/UseEffect'
 
 import './App.css'
 import Graph from './components/Graph/Graph';
@@ -30,6 +31,9 @@ function App() {
       {!isShowMain ? <LoginView isShowMain={isShowMain} setShowMain={setShowMain} /> : null}
       {isShowMain ? <CardsView cards={cards} /> : null}
       <Graph></Graph>
+      <FirstScenerio />
+      <SecondScenerio />
+      <ThirdScenerio />
     </div>
   );
 }
